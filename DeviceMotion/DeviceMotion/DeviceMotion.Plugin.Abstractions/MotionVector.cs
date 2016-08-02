@@ -38,7 +38,7 @@ namespace DeviceMotion.Plugin.Abstractions
 		/// <value>The value.</value>
 		public override double? Value {
 			get{
-				return Math.Sqrt (Math.Pow (X, 2) + Math.Pow (Y, 2) + Math.Pow (Z, 2));
+				return Math.Sqrt(X * X + Y * Y + Z * Z);
 			}
 		}
 	}

@@ -56,6 +56,11 @@ namespace DeviceMotion.Plugin.Abstractions
 		/// <value>The type of the value.</value>
 		public MotionSensorValueType ValueType { get; set; }
 
+		/// <summary>
+		/// Gets or sets the time stamp in seconds
+		/// </summary>
+		/// <value>The time stamp in seconds.</value>
+		public double? Timestamp { get; set; }
     }
 
     /// <summary>

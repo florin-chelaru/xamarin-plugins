@@ -132,7 +132,7 @@ namespace DeviceMotion.Plugin
             if (SensorValueChanged == null)
                 return;
 
-            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Magnetometer, Value = new MotionVector() { X = data.MagneticField.X, Y = data.MagneticField.Y, Z = data.MagneticField.Z } });
+            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Magnetometer, Value = new MotionVector() { X = data.MagneticField.X, Y = data.MagneticField.Y, Z = data.MagneticField.Z }, Timestamp = data.Timestamp });
 
         }
 
@@ -146,7 +146,7 @@ namespace DeviceMotion.Plugin
             if (SensorValueChanged == null)
                 return;
 
-            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Accelerometer, Value = new MotionVector() { X = data.Acceleration.X, Y = data.Acceleration.Y, Z = data.Acceleration.Z } });
+            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Accelerometer, Value = new MotionVector() { X = data.Acceleration.X, Y = data.Acceleration.Y, Z = data.Acceleration.Z }, Timestamp = data.Timestamp });
 
         }
 
@@ -160,7 +160,7 @@ namespace DeviceMotion.Plugin
             if (SensorValueChanged == null)
                 return;
 
-            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Gyroscope, Value = new MotionVector() { X = data.RotationRate.x, Y = data.RotationRate.y, Z = data.RotationRate.z } });
+            SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Gyroscope, Value = new MotionVector() { X = data.RotationRate.x, Y = data.RotationRate.y, Z = data.RotationRate.z }, Timestamp = data.Timestamp });
 
         }
 
